@@ -5,3 +5,117 @@ body {
   background-color: #000000;
   color: #333;
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #ffffff;
+}
+
+.file-input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.file-input-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  padding: 15px;
+  font-weight: bold;
+  background-color: transparent;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #666;
+  font-size: 1rem;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.file-input-label:hover {
+  color: white;
+  transform: scale(1.05);
+}
+
+.file-input-icon {
+  font-size: 2rem;
+  margin-right: 10px;
+}
+
+.hidden-file-input {
+  display: none;
+}
+
+.upload-button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #000000;
+  border: none;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 20px;
+  transition: background-color 0.5s ease;
+}
+
+.upload-button:disabled {
+  cursor: not-allowed;
+}
+
+.upload-button:enabled {
+  background-color: #ccc;
+}
+
+.upload-button:enabled:hover {
+  background-color: #ffffff;
+}
+
+.progress-container {
+  margin-top: 20px;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #4caf50;
+  border-radius: 8px;
+}
+
+.loader {
+  width: 120px;
+  height: 22px;
+  border-radius: 20px;
+  color: #ffffff;
+  border: 2px solid;
+  position: relative;
+}
+.loader::before {
+  content: "";
+  position: absolute;
+  margin: 2px;
+  inset: 0 100% 0 0;
+  border-radius: inherit;
+  background: currentColor;
+  animation: l6 2s infinite;
+}
+@keyframes l6 {
+  100% {
+    inset: 0;
+  }
+}
+
+.error-message {
+  color: red;
+  margin-top: 20px;
+}
