@@ -1,12 +1,11 @@
 # Mon Application Fullstack - Uploader et Traiter des Fichiers CSV
 
-Cette application fullstack permet aux utilisateurs de télécharger un fichier CSV via le frontend, qui sera ensuite envoyé au backend pour être traité. 
+Cette application fullstack permet aux utilisateurs de télécharger un fichier CSV via le frontend, qui sera ensuite envoyé au backend pour être traité.
 Le backend parse le fichier CSV, effectue les opérations nécessaires, et renvoie le fichier traité sous forme d'un fichier ZIP.
 
 ## Architecture du projet
 
 Le projet est organisé comme suit :
-
 
 ### Client (Frontend)
 
@@ -34,14 +33,20 @@ Avant de commencer, vous devez avoir installé sur votre machine les outils suiv
    git clone https://github.com/your-username/mon-repo.git
    cd mon-repo
 
+   ```
+
 2. lancer le Front
-    ```bash
+
+   ```bash
    cd client
    pnpm install
    pnpm run dev
 
+   ```
+
 3. lancer le Back
    ```bash
    cd ../server
-   npm install
+   pnpm install
    npm start
+   ```
