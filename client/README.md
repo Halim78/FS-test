@@ -1,50 +1,26 @@
-# React + TypeScript + Vite
+# Frontend - Uploader et Traiter des Fichiers CSV
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ce dossier contient le code frontend de l'application fullstack, construit avec **React** et **TypeScript**. Il permet à l'utilisateur de télécharger un fichier CSV, qui sera ensuite envoyé au backend pour traitement. Le backend génère un fichier ZIP contenant les données traitées, qui est renvoyé au client pour téléchargement.
 
-Currently, two official plugins are available:
+## Fonctionnalités
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Formulaire de téléchargement de fichier CSV.
+- Envoi du fichier CSV au backend via une requête HTTP POST.
+- Réception du fichier ZIP traité du backend pour le téléchargement.
 
-## Expanding the ESLint configuration
+## Prérequis
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Avant de commencer, vous devez avoir installé les outils suivants sur votre machine :
 
-- Configure the top-level `parserOptions` property like this:
+- [Node.js](https://nodejs.org/)
+- [pnpm](https://pnpm.io/fr/)
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Installation
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+1. Allez dans le dossier `client` de votre projet.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+   ```bash
+   cd client
+   pnpm install
+   pnpm run dev
+   ```
