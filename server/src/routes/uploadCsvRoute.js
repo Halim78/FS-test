@@ -5,6 +5,17 @@ const path = require("path");
 
 const router = express.Router();
 
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, "src/uploads/");
+  },
+  filename: function (req, file, cb) {
+    const timestamp = Date.now();
+    const uniqueName = `${file.originalname}-${timestamp}`;
+    cb(null, uniqueName); // Passer le nom final du fichier au callback
+  },
+});
+
 const fileFilter = (req, file, cb) => {
   const ext = path.extname(file.originalname).toLowerCase();
   const mime = file.mimetype;
