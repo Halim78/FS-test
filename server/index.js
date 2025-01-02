@@ -3,7 +3,6 @@ const cors = require("cors");
 const app = express();
 const uploadCsvRoute = require("./src/routes/uploadCsvRoute");
 
-//Autorisation pour les requêtes de l'application client
 app.use(
   cors({
     origin: "http://localhost:5173",
